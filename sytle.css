@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --DarkMagenta: hsl(300, 43%, 22%) ;
+    --SoftPink: hsl(333, 80%, 67%);
+   --GrayishMagenta: hsl(303, 10%, 53%);
+    --LightMagenta: hsl(300, 24%, 96%);
+     --White: hsl(0, 0%, 100%)
+}
+body{
+    font-family: "League Spartan", sans-serif;
+    background-image: url(./images/bg-pattern-top-desktop.svg),url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap:2rem;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    max-width: 1000px;
+
+}
+.content{
+    display: flex;
+    gap:10rem;
+}
+.services{
+    flex-basis: 30%;
+}
+
+.services h1{
+    width:300px;
+    color: var(--DarkMagenta);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 2rem;
+    
+}
+
+.services p{
+    
+    color: var(--GrayishMagenta);
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    
+}
+.rating{
+    flex-basis: 50%;
+}
+.rating p{
+    color: var(--DarkMagenta);
+    font-weight: bold;
+}
+.reviews,.report,.bestTech{
+    background-color: var(--LightMagenta);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem 2rem;
+    gap:1.5rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;   
+}
+.report{
+    margin-left: 2rem;
+}
+.bestTech{
+    margin-left: 4rem;
+}
+.feedback{
+    display: flex;
+    gap:1.5rem;
+    height: 30vh;
+    align-items: center;
+
+}
+.buyerone,.buyertwo,.buyerthree{
+background-color: var(--DarkMagenta);
+color: var(--White);
+padding:2rem 1.5rem;
+border-radius: .5rem;
+}
+.buyertwo{
+    margin-top: 2rem;
+}
+.buyerthree{
+    margin-top: 4rem;
+}
+.header{
+    display: flex;
+    gap:1.5rem;
+    margin-bottom: 1.5rem;
+}
+.header img{
+    width: 30px;
+    border-radius: 50%;
+    
+}
+.header .name p{
+    font-size: 15px;
+    
+}
+.header .name p:last-of-type{
+    color: var(--SoftPink);
+}
+
+@media screen and (max-width:375px) {
+    body{
+        
+        background-image: url(./images/bg-pattern-top-mobile.svg),url(./images/bg-pattern-bottom-mobile.svg);
+        gap:0;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        gap:1.5rem;
+        max-width: 350px;
+       padding:2rem 1rem;
+       height: 200vh;
+    
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+
+    }
+    .services{
+        text-align: center;
+        margin-top: 100px;
+    }
+    .report,.bestTech{
+        margin-left: 0;
+    }
+    .feedback{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        margin-bottom: 2rem;
+
+    }
+    .buyertwo,.buyerthree{
+        margin-top:0;
+    }
+   .attribution{
+    margin-bottom: 2rem;
+   }
+    
+}
